@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as methodOverride from 'method-override';
 import { RegisterRoutes } from './routes';
 
-const app = express();
+export const app = express();
 
 app.use('/docs', express.static(__dirname + '/swagger-ui'));
 app.use('/swagger.json', (req, res) => {
