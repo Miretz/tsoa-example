@@ -1,5 +1,5 @@
-import {Route, Get, Post, Delete, Patch, Example, Body} from 'tsoa';
-import {User, UserCreateRequest, UserUpdateRequest} from '../models/user';
+import { Route, Get, Post, Delete, Patch, Example, Body } from 'tsoa';
+import { User, UserCreateRequest, UserUpdateRequest } from '../models/user';
 
 @Route('Users')
 export class UsersController {
@@ -29,12 +29,12 @@ export class UsersController {
         };
     }
 
-    /** 
-     * Create a user 
-     * @param request This is a user creation request description 
+    /**
+     * Create a user
+     * @param request This is a user creation request description
      */
     @Post()
-    public async Create(@Body() request: UserCreateRequest): Promise<User> {
+    public async Create( @Body() request: UserCreateRequest): Promise<User> {
         return {
             createdAt: new Date(),
             email: request.email,
@@ -50,7 +50,7 @@ export class UsersController {
 
     /** Update a user */
     @Patch()
-    public async Update(@Body() request: UserUpdateRequest): Promise<User> {
+    public async Update( @Body() request: UserUpdateRequest): Promise<User> {
         return {
             createdAt: request.createdAt,
             email: request.email,

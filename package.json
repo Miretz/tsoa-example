@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run build && node ./dist/server.js",
     "build": "npm run clean && npm run lint && npm run swagger-gen && npm run routes-gen && tsc && npm run copy-swagger-ui",
-    "lint": "tslint ./src/**/*.ts",
+    "lint": "tslint --type-check --project ./ ./src/**/*.ts",
     "clean": "rimraf dist",
     "swagger-gen": "tsoa swagger",
     "routes-gen": "tsoa routes",
@@ -15,20 +15,20 @@
   "author": "Luke Autry <lukeautry@gmail.com> (http://www.lukeautry.com)",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "method-override": "^2.3.6",
-    "tsoa": "^1.0.0"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "tsoa": "^1.2.2"
   },
   "devDependencies": {
-    "@types/body-parser": "0.0.30",
-    "@types/express": "^4.0.30",
-    "@types/method-override": "0.0.27",
-    "@types/node": "^6.0.33",
+    "@types/body-parser": "1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/method-override": "0.0.29",
+    "@types/node": "^8.0.2",
     "ncp": "^2.0.0",
-    "rimraf": "^2.5.2",
-    "tslint": "^3.11.0",
-    "typescript": "2.0.0"
+    "rimraf": "^2.6.1",
+    "tslint": "^5.4.3",
+    "typescript": "2.1.5"
   },
   "repository": {
     "type": "git",
