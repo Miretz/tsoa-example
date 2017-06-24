@@ -1,5 +1,6 @@
 # Typescript + Express + Swagger + Gulp + Nodemon + Tests
 
+
 ## Run 
 
 ```
@@ -39,7 +40,7 @@ npm run dev
 ## Swagger UI
 
 
-To access Swagger UI navigate to localhost:3000/doc
+To access Swagger UI navigate to http://localhost:3000/docs
 
 
 ## Notes
